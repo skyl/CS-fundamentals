@@ -29,14 +29,14 @@ def blank_mat(list_of_lists, value=None):
     ] for r in list_of_lists]
 
 
-def safe_get(i, j, landscape):
+def safe_get(i, j, landscape, default_value=math.inf):
     # if off the landscape, return inf eg not the lowest
     if (i < 0 or j < 0):
-        return math.inf
+        return default_value
     try:
         return landscape[i][j]
     except IndexError:
-        return math.inf
+        return default_value
 
 
 def who_is_lowest(i, j, landscape):
