@@ -13,7 +13,7 @@ return a dictionary maping coordinates to counts of points that flow down
 to that point.
 
 For the above example, the only low point is the 0 at (1, 1),
-so the answer is:
+so the result is:
 
 {
     (1, 1): 10,
@@ -23,9 +23,9 @@ so the answer is:
 import math
 
 
-def make_null_copy(list_of_lists, null_value=None):
+def blank_mat(list_of_lists, value=None):
     return [[
-        null_value for _ in r
+        value for _ in r
     ] for r in list_of_lists]
 
 
@@ -71,10 +71,10 @@ def drain(i, j, landscape, accumulation):
 
 def mountain_rainfall(landscape):
     result = {}
-    accumulation = make_null_copy(landscape, 1)
+    accumulation = blank_mat(landscape, 1)
 
-    for i, r in enumerate(landscape):
-        for j, c in enumerate(r):
+    for i in range(len(landscape)):
+        for j in range(len(landscape[i])):
             drain(i, j, landscape, accumulation)
 
     for i in range(len(accumulation)):
