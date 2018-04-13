@@ -50,6 +50,7 @@ def who_is_lowest(i, j, landscape):
         (i, (j - 1)),
         # me
         (i, (j + 1)),
+        ((i + 1), (j - 1)),
         ((i + 1), j),
         ((i + 1), (j + 1))
     ]:

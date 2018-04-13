@@ -36,6 +36,17 @@ class TestMountainRainfall(unittest.TestCase):
         }
         self.assertEqual(mr.mountain_rainfall(landscape), result)
 
+    def test_that_would_have_caught_missing_neighbor(self):
+        land = [
+            [1, 1, 1],
+            [0, 0, 1],
+            [-1, 1, 2],
+        ]
+        result = {
+            (2, 0): 9,
+        }
+        self.assertEqual(mr.mountain_rainfall(land), result)
+
 
 class TestWhoIsLowest(unittest.TestCase):
 
