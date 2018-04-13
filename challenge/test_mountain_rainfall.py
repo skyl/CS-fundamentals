@@ -26,9 +26,6 @@ class TestMountainRainfall(unittest.TestCase):
             [0, 1, 2, 3, 4, 5],
         ]
         result = {
-            (0, 2): 7,
-        }
-        result = {
             (0, 2): 8,
             (1, 4): 6,
             (2, 0): 9,
