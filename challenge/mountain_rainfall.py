@@ -9,7 +9,7 @@ Given a list of lists in the form:
     [2, 3, 4, 7, 9],
 ]
 
-return a dictionary maping coordinates to counts of points that flow down
+return a dictionary mapping coordinates to counts of points that flow down
 to that point.
 
 For the above example, the only low point is the 0 at (1, 1),
