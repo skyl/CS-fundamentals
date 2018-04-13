@@ -30,7 +30,8 @@ def blank_mat(list_of_lists, value=None):
 
 
 def safe_get(i, j, landscape, default_value=math.inf):
-    # if off the landscape, return inf eg not the lowest
+    # if off the landscape, return default_value.
+    # math.inf is used so rainfall will not drain off landscape
     if (i < 0 or j < 0):
         return default_value
     try:
