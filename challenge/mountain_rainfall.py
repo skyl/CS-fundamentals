@@ -12,11 +12,11 @@ Given a list of lists in the form:
 return a dictionary mapping coordinates to counts of points that flow down
 to that point.
 
-For the above example, the only low point is the 0 at (1, 1),
+For the above example, the only low point is the 0 at (0, 1),
 so the result is:
 
 {
-    (1, 1): 10,
+    (0, 1): 10,
 }
 """
 
