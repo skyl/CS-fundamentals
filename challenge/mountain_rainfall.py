@@ -9,14 +9,14 @@ Given a list of lists in the form:
     [2, 3, 4, 7, 9],
 ]
 
-return a dictionary maping coordinates to counts of points that flow down
+return a dictionary mapping coordinates to counts of points that flow down
 to that point.
 
-For the above example, the only low point is the 0 at (1, 1),
+For the above example, the only low point is the 0 at (0, 1),
 so the result is:
 
 {
-    (1, 1): 10,
+    (0, 1): 10,
 }
 """
 
@@ -30,7 +30,8 @@ def blank_mat(list_of_lists, value=None):
 
 
 def safe_get(i, j, landscape, default_value=math.inf):
-    # if off the landscape, return inf eg not the lowest
+    # if off the landscape, return default_value.
+    # math.inf is used so rainfall will not drain off landscape
     if (i < 0 or j < 0):
         return default_value
     try:
